@@ -12,12 +12,18 @@ class ResultViewController: UIViewController {
 
     @IBOutlet weak var settingsLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    
+    var splitAmount : String?
+    var splitText: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        settingsLabel.text = splitText ?? ""
+        totalLabel.text = splitAmount ?? ""
         // Do any additional setup after loading the view.
     }
     @IBAction func recalculatePressed(_ sender: UIButton) {
+        self.dismiss(animated: true)
     }
     
 
